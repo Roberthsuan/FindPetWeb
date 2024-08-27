@@ -1,5 +1,5 @@
 let img_url = {
-    "旺財": "DoDo.png",
+    "旺財": "dodo.png",
     "天網灰灰": "graycat.png",
     "白冰冰": "whitedog.png",
     "凱旋門":"bird.png",
