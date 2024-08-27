@@ -1,0 +1,48 @@
+
+#preview img {
+    object-fit: cover;
+    /* 保持圖片中心，裁剪溢出部分 */
+    width: 500px;
+    /* 固定寬度為300px */
+    height: 500px;
+    /* 固定高度為300px，形成正方形 */
+}
+
+
+.flex-center {
+    display: block;
+    justify-content: center;
+}
+
+#preview {
+    width: 500px;
+    height: 500px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #e0e0e0;
+}
+
+#img-input{
+    width: 500px;
+}
+
+.data-input{
+
+}
+
+/* 其他樣式... */
+
+@media (max-width: 768px) {
+    .flex-center .input-group {
+        width: 400px;
+    }
+    #preview {
+        width: 400px;
+        height: 400px;
+    }
+
+    #img-input{
+        width: 400px;
+    }
+
+}
