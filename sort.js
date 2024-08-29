@@ -203,3 +203,18 @@ function scrollToTop() {
         behavior: 'smooth'
     });
 }
+
+function searchPets() {
+    // 取得使用者輸入的搜尋關鍵字並轉成小寫
+    let query = document.getElementById('searchInput').value.toLowerCase();
+
+    // 根據搜尋關鍵字過濾animals_list陣列
+    let filteredAnimals = animals_list.filter(animal => {
+        return animal.name.toLowerCase().includes(query) ||
+            animal.type.toLowerCase().includes(query) ||
+            animal.owner.toLowerCase().includes(query);
+    });
+
+    // 顯示過濾後的資料
+    show(filteredAnimals);
+}

@@ -5,9 +5,9 @@ document.getElementById("regName").addEventListener("input", function () {
     let nameError = document.getElementById("nameError");
 
     if (name.length < 2) {
-        nameError.textContent = "姓名長度必須至少為2個字符。";
+        nameError.textContent = "姓名長度必須至少為2個字元。";
     } else {
-        nameError.textContent = ""; // 清除错误信息
+        nameError.textContent = ""; // 清除錯誤訊息
     }
 });
 
@@ -48,7 +48,7 @@ document.getElementById("regPassword").addEventListener("input", function () {
 
     if (password.length < 8) {
         console.log("Invalid email format"); // 測試用
-        passwordError.textContent = "密碼長度必須至少為8個字符。";
+        passwordError.textContent = "密碼長度必須至少為8個字元。";
     } else {
         passwordError.textContent = ""; // 清除錯誤訊息
     }
@@ -63,13 +63,13 @@ function registerUser() {
 
     // 在提交時再進行一次驗證
     if (name.length < 2) {
-        alert("姓名長度必須至少為2個字符。");
+        alert("姓名長度必須至少為2個字元。");
         return;
     }
 
     let phonePattern = /^[0-9]{10}$/;
     if (!phonePattern.test(phone)) {
-        alert("請輸入有效的10位數電話號碼。");
+        alert("請輸入有效的10位數手機號碼。");
         return;
     }
 
@@ -80,7 +80,7 @@ function registerUser() {
     }
 
     if (password.length < 8) {
-        alert("密碼長度必須至少為8個字符。");
+        alert("密碼長度必須至少為8個字元。");
         return;
     }
 
@@ -89,7 +89,7 @@ function registerUser() {
     alert("註冊成功！");
     document.getElementById("registerForm").reset(); // 清空表單
     let registerModal = bootstrap.Modal.getInstance(document.getElementById('registerModal'));
-    registerModal.hide(); // 隐藏註冊按鈕
+    registerModal.hide(); // 隱藏註冊按鈕
 }
 
 
@@ -114,7 +114,7 @@ document.getElementById("floatingPassword").addEventListener("input", function (
     let passwordError = document.getElementById("passwordError");
 
     if (password.length < 8) {
-        passwordError.textContent = "密碼長度必須至少為8個字符。";
+        passwordError.textContent = "密碼長度必須至少為8個字元。";
     } else {
         passwordError.textContent = ""; // 清除錯誤訊息
     }
@@ -133,7 +133,7 @@ function loginUser() {
     }
 
     if (password.length < 8) {
-        alert("密碼長度必須至少為8個字符。");
+        alert("密碼長度必須至少為8個字元。");
         return;
     }
 
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
     updateNavBar();
 });
 
-// 切換到註冊模態框
+// 切換到註冊模組
 function switchToRegisterModal() {
     // 隱藏登入模態框
     let loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
@@ -202,21 +202,21 @@ function switchToRegisterModal() {
         loginModal.hide();
     }
 
-    // 顯示註冊模態框
+    // 顯示註冊模組
     let registerModal = new bootstrap.Modal(document.getElementById('registerModal'));
     registerModal.show();
 }
 
 
-// 打開身份核對模態框
+// 打開身份核對模組
 function openIdentityVerificationModal() {
-    // 隱藏登入模態框
+    // 隱藏登入模組
     let loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
     if (loginModal) {
         loginModal.hide();
     }
 
-    // 顯示身份核對模態框
+    // 顯示身份核對模組
     let identityVerificationModal = new bootstrap.Modal(document.getElementById('identityVerificationModal'));
     identityVerificationModal.show();
 }
@@ -243,13 +243,13 @@ function verifyIdentity() {
         // 模擬寄送密碼至用戶電子郵件
         alert("密碼已寄送至您的電子郵件！");
 
-        // 隱藏身份核對模態框
+        // 隱藏身份核對模組
         let identityVerificationModal = bootstrap.Modal.getInstance(document.getElementById('identityVerificationModal'));
         identityVerificationModal.hide();
     } else {
         alert("尚未註冊!");
 
-        // 隱藏身份核對模態框
+        // 隱藏身份核對模組
         let identityVerificationModal = bootstrap.Modal.getInstance(document.getElementById('identityVerificationModal'));
         identityVerificationModal.hide();
     }
@@ -260,5 +260,5 @@ function verifyIdentity() {
 // 清除localstorage, 沒事不要開
 function allgone() {
     localStorage.clear();
-    location.reload(); // 刷新页面
+    location.reload(); // 刷新頁面
 }

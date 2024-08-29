@@ -70,6 +70,9 @@
                 <li><a href="Index.html" class="nav-link px-2 link-secondary">首頁</a></li>
                 <li><a href="ImageRecognition.html" class="nav-link px-2 link-dark">影像辨識</a></li>
                 <li id="uploadLink"><a href="upload.html" class="nav-link px-2 link-dark pri">走失刊登</a></li>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="輸入寵物名稱、種類或飼主名字..." onkeyup="searchPets()">
+                </div>
             </ul>
 
 
@@ -91,6 +94,8 @@
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal"
                     id="registerButton">註冊</button>
             </div>
+
+
         </header>
     </div>
 
